@@ -1,0 +1,15 @@
+C:\Users\BluePhoenix\Desktop\Entregas\Lab03_JoelDiaz\labsemana3_ejercicio4\obj\Debug\net7.0\labsemana3_ejercicio4.csproj.AssemblyReference.cache
+C:\Users\BluePhoenix\Desktop\Entregas\Lab03_JoelDiaz\labsemana3_ejercicio4\obj\Debug\net7.0\labsemana3_ejercicio4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\BluePhoenix\Desktop\Entregas\Lab03_JoelDiaz\labsemana3_ejercicio4\obj\Debug\net7.0\labsemana3_ejercicio4.AssemblyInfoInputs.cache
+C:\Users\BluePhoenix\Desktop\Entregas\Lab03_JoelDiaz\labsemana3_ejercicio4\obj\Debug\net7.0\labsemana3_ejercicio4.AssemblyInfo.cs
+C:\Users\BluePhoenix\Desktop\Entregas\Lab03_JoelDiaz\labsemana3_ejercicio4\obj\Debug\net7.0\labsemana3_ejercicio4.csproj.CoreCompileInputs.cache
+C:\Users\BluePhoenix\Desktop\Entregas\Lab03_JoelDiaz\labsemana3_ejercicio4\bin\Debug\net7.0\labsemana3_ejercicio4.exe
+C:\Users\BluePhoenix\Desktop\Entregas\Lab03_JoelDiaz\labsemana3_ejercicio4\bin\Debug\net7.0\labsemana3_ejercicio4.deps.json
+C:\Users\BluePhoenix\Desktop\Entregas\Lab03_JoelDiaz\labsemana3_ejercicio4\bin\Debug\net7.0\labsemana3_ejercicio4.runtimeconfig.json
+C:\Users\BluePhoenix\Desktop\Entregas\Lab03_JoelDiaz\labsemana3_ejercicio4\bin\Debug\net7.0\labsemana3_ejercicio4.dll
+C:\Users\BluePhoenix\Desktop\Entregas\Lab03_JoelDiaz\labsemana3_ejercicio4\bin\Debug\net7.0\labsemana3_ejercicio4.pdb
+C:\Users\BluePhoenix\Desktop\Entregas\Lab03_JoelDiaz\labsemana3_ejercicio4\obj\Debug\net7.0\labsemana3_ejercicio4.dll
+C:\Users\BluePhoenix\Desktop\Entregas\Lab03_JoelDiaz\labsemana3_ejercicio4\obj\Debug\net7.0\refint\labsemana3_ejercicio4.dll
+C:\Users\BluePhoenix\Desktop\Entregas\Lab03_JoelDiaz\labsemana3_ejercicio4\obj\Debug\net7.0\labsemana3_ejercicio4.pdb
+C:\Users\BluePhoenix\Desktop\Entregas\Lab03_JoelDiaz\labsemana3_ejercicio4\obj\Debug\net7.0\labsemana3_ejercicio4.genruntimeconfig.cache
+C:\Users\BluePhoenix\Desktop\Entregas\Lab03_JoelDiaz\labsemana3_ejercicio4\obj\Debug\net7.0\ref\labsemana3_ejercicio4.dll
