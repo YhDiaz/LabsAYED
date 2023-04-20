@@ -1,0 +1,4 @@
+Aria,mage,480,180,50
+Axl,beast,560,135,90
+Bjorn,viking,530,110,75
+Calantha,mage,440,160,35
