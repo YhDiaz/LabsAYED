@@ -1,0 +1,11 @@
+Aria,mage,480,180,50
+Axl,beast,560,135,90
+Bjorn,viking,530,110,75
+Calantha,mage,440,160,35
+Cassius,nigromante,430,180,60
+Dalia,beast,510,120,80
+Einar,viking,580,140,85
+Eris,mage,500,190,40
+Gideon,nigromante,480,200,65
+Gunnar,viking,570,130,70
+Jorgen,beast,590,140,95
