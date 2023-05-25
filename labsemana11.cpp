@@ -1,24 +1,8 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-/*
-// Function to add an edge between vertices u and v
-void addEdge(vector<vector<int>>& graph, int u, int v) {
-	graph[u][v] = 1;
-	graph[v][u] = 1;
-}
 
-// Function to print the adjacency matrix
-void printGraph(const vector<vector<int>>& graph) {
-	cout << "Adjacency Matrix:\n";
-	for (const auto& row : graph) {
-	for (int val : row) {
-	cout << val << " ";
-	}
-	cout << '\n';
-	}
-}*/
-
+//Clases
 class Graph
 {
 	public:
@@ -34,11 +18,13 @@ class Graph
 		void addEdge(int, int);
 		void printGraphs();
 		bool areAdjacent(int, int);
-		
+		int getSize();
+		void thereIsPath(int, int);
 	
 	//Atributos
 	private:
 		vector<vector<int>> graphs_;
+		int size_;
 };
 
 //Definiciones
@@ -58,36 +44,55 @@ class Graph
 	void Graph::createMatrix()
 	{
 		int size = 0;
+		bool stop = true;
 		
-		cout << "Indique la medida de la matriz: ";
-		cin >> size;
-		cout << endl;
+		do
+		{
+			if(stop)
+			{
+				cout << "\t* Indique la medida de la matriz (minimo: 8): ";
+			}
+			else
+			{
+				cout << "\n\t\t* (Error: Entrada invalida) Por favor, ingrese un numero valido: ";
+			}
+			
+			cin >> size;
+			
+			if(size < 8)
+			{
+				stop = false;
+			}
+			else
+			{
+				stop = true;
+			}
+		}
+		while(!stop);		
 		
 		graphs_ = vector<vector<int>>(size, vector<int>(size, 0));
+		size_ = size;
 	}
 	
 	void Graph::addEdge(int u, int v)
 	{
 		graphs_[u][v] = 1;
 		graphs_[v][u] = 1;
+		
+		cout << "\n\t* Estableciendo conexion entre los vertices " << u + 1 << " y " << v + 1;
 	}
 	
 	void Graph::printGraphs()
 	{
-		cout << "\nMatriz de adyacencia:\n";
+		cout << "\n* Matriz de adyacencia:\n" << endl;
 				
 		for(const auto& row : graphs_)
 		{
+			cout << '\t';
+			
 			for(int val : row)
 			{
-				if(val == 0)
-				{
-					cout << "   ";
-				}
-				else
-				{
-					cout << val << " ";
-				}				
+				cout << val << " ";			
 			}
 				
 			cout << endl;
@@ -104,10 +109,20 @@ class Graph
 		return false;
 	}
 	
-int main() {
+	int Graph::getSize()
+	{
+		return size_;
+	}
 	
-	//Ejercicio 1: Creacion de estructura e incorporacion de la informacion a la matriz del grafo
-	Graph *graphs = new Graph();
+	void Graph::thereIsPath(int vertex1, int vertex2)
+	{
+		
+	}
+	
+//Funciones
+void exercise01(Graph* graphs)
+{
+	cout << "-------------------- EJERCICIO 1: CREACION DEL GRAFO E INCORPORACION DE INFORMACION --------------------\n" << endl;
 	graphs->createMatrix();
 	
 	//Se crean las conexiones entre los vertices
@@ -127,35 +142,78 @@ int main() {
 	graphs->addEdge(5, 6); //F-G
 	graphs->addEdge(5, 7); //F-H	
 	graphs->addEdge(6, 7); //G-H
-	
-	//Ejercicio 2: Imprimir la matriz del grafo
+}
+
+void exercise02(Graph* graphs)
+{
+	cout << "\n\n-------------------- EJERCICIO 2: IMPRESION DE LA MATRIZ DE ADYACENCIA --------------------" << endl;
 	graphs->printGraphs();
-	
-	//Ejercicio 3: Vertices adyacentes
-	int v1 = 0, v2 = 1;
+}
+
+void exercise03(Graph* graphs)
+{
+	cout << "\n\n-------------------- EJERCICIO 3: VERTICES ADYACENTES --------------------" << endl;
+	int v1 = 1, v2 = 2;
 	
 	if(graphs->areAdjacent(v1, v2))
 	{
-		cout << "\nLos vertices " << v1 << " y " << v2 << " son adyacentes" << endl;
+		cout << "\n\tLos vertices " << v1 << " y " << v2 << " son adyacentes" << endl;
 	}
 	else
 	{
-		cout << "\nLos vertices " << v1 << " y " << v2 << " nos son adyacentes" << endl;
+		cout << "\n\tLos vertices " << v1 << " y " << v2 << " nos son adyacentes" << endl;
 	}
 	
-	cout << "\nIngrese dos vertices para saber si son adyacentes (desde 1 a 8);\nPrimer vertice: ";
+	cout << "\n\t* Ingrese dos vertices para saber si son adyacentes (desde 1 a " << graphs->getSize() << ");\n\n\t* Primer vertice: ";
 	cin >> v1;
-	cout << "Segundo vertice: ";
+	
+	while(v1 < 1 || v1 > graphs->getSize())
+	{
+		cout << "\n\t\t* (Error: Numero fuera de rango) Por favor, ingrese un valor valido: ";
+		cin >> v1;
+	}
+	
+	cout << "\n\t* Segundo vertice: ";
 	cin >> v2;
 	
+	while(v2 < 1 || v2 > graphs->getSize())
+	{
+		cout << "\n\t\t* (Error: Numero fuera de rango) Por favor, ingrese un valor valido: ";
+		cin >> v2;
+	}
+	
 	if(graphs->areAdjacent(v1, v2))
 	{
-		cout << "\nLos vertices " << v1 << " y " << v2 << " son adyacentes" << endl;
+		cout << "\n\tLos vertices " << v1 << " y " << v2 << " son adyacentes" << endl;
 	}
 	else
 	{
-		cout << "\nLos vertices " << v1 << " y " << v2 << " nos son adyacentes" << endl;
+		cout << "\n\tLos vertices " << v1 << " y " << v2 << " nos son adyacentes" << endl;
 	}
+}
+
+int main() {
+	
+	//Ejercicio 1: Creacion de estructura e incorporacion de la informacion a la matriz del grafo
+	Graph *graphs = new Graph();
+	exercise01(graphs);
+	
+	//Ejercicio 2: Imprimir la matriz del grafo
+	exercise02(graphs);
+	
+	//Ejercicio 3: Vertices adyacentes
+	exercise03(graphs);
+	
+	//Ejercicio 4: Determinar la existencia de un camino entre dos vertices
+	
+	
+	//Ejercicio 5: Convertir el grafo en un grafo dirigido con al menos un vertice que no puede ser alcanzado por otro
+	
+	
+	//Ejercicio 6: Convertir el grafo en un grafo dirigido que contenga un ciclo
+	
+	
+	//Ejercicio 7: Convertir el grafo en un grafo dirigido, transformandolo en dos subgrafos con la misma cantidad de vertices
 	
 	graphs->~Graph();
 	
